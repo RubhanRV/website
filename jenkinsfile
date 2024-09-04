@@ -20,7 +20,7 @@ pipeline {
           sh " sudo cp -r images /var/www/html "
             }
          steps { 
-           echo "success"
+           sh " echo success "
             }
     }
   } 
