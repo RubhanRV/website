@@ -17,13 +17,9 @@ pipeline {
     stage('publish web') {
       steps { 
           sh " sudo cp index.html /var/www/html "
-          sh " sudo cp -r images   /var/www/html "
-
-      steps { 
-      echo "Success"
-         
-     }
+          sh " sudo cp -r images /var/www/html "
+            }
     }
   } 
 }
-}
+
