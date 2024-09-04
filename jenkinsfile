@@ -9,6 +9,7 @@ pipeline {
   stages {
     stage('Pull Source') {
       steps {
+         echo " git checkout "
         git credentialsId: '4ca32847-933a-4f8d-a160-245be7f4d90e', branch: "${git_branch}", url: "${git_url}"
        
       }
@@ -16,8 +17,13 @@ pipeline {
     
     stage('publish web') {
       steps { 
+      echo "copying content"
           sh " sudo cp index.html /var/www/html "
           sh " sudo cp -r images   /var/www/html "
+
+      steps { 
+      echo "Success"
+         
      }
     }
   } 
