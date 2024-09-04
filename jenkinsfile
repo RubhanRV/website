@@ -16,7 +16,7 @@ pipeline {
     
     stage('publish web') {
       steps { 
-          sh " cp . /var/www/html "
+          sh " cp -r . /var/www/html "
      }
     }
   } 
