@@ -1,0 +1,24 @@
+pipeline {
+   environment {
+     git_url = "https://github.com/RubhanRV/website.git"
+     git_branch = "master"
+   }
+
+  agent {label 'test'}
+  //agent any
+  stages {
+    stage('Pull Source') {
+      steps {
+        git credentialsId: '04916cca-e1b8-4e14-90d3-5a936c8c52b8', branch: "${git_branch}", url: "${git_url}"
+       
+      }
+     }
+    
+    stage('publish web') {
+      steps { 
+          sh " cp . /var/www/html "
+     }
+    }
+  } 
+
+}
