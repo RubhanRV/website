@@ -19,6 +19,9 @@ pipeline {
           sh " sudo cp index.html /var/www/html "
           sh " sudo cp -r images /var/www/html "
             }
+         steps { 
+           echo "success"
+            }
     }
   } 
 }
