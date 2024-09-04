@@ -16,8 +16,8 @@ pipeline {
     
     stage('publish web') {
       steps { 
-          sh " cp index.html /var/www/html "
-          sh " cp -r images   /var/www/html "
+          sh " sudo cp index.html /var/www/html "
+          sh " sudo cp -r images   /var/www/html "
      }
     }
   } 
