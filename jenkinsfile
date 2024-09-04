@@ -4,12 +4,12 @@ pipeline {
      git_branch = "master"
    }
 
-  agent {label 'test'}
+  agent {label 'node'}
   //agent any
   stages {
     stage('Pull Source') {
       steps {
-        git credentialsId: '04916cca-e1b8-4e14-90d3-5a936c8c52b8', branch: "${git_branch}", url: "${git_url}"
+        git credentialsId: '4ca32847-933a-4f8d-a160-245be7f4d90e', branch: "${git_branch}", url: "${git_url}"
        
       }
      }
